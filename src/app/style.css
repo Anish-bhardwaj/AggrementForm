@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-panel {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+  overflow-y: hidden; /* Initially disable the scroll for the PDF panel */
+}
+
+.right-panel {
+ 
+  width: 50%;
+  padding: 20px 0 ;
+  overflow-y: scroll;
+  border-right: 2px solid #ccc;
+}
+
+.pdf-container {
+  position: sticky;
+  top: 0; /* Keep the PDF container sticky when scrolling */
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.right-panel form {
+  display: flex;  
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.right-panel form div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+form div label{
+  font-weight: bold;
+  color: black;
+}
+input{
+  outline: none;
+  border: 2px solid rgb(135, 135, 248);
+
+}
+input[type="text"] {
+  width: 100%;             /* Full width of the container */
+  padding: 6px;          /* Padding for spacing */
+  margin: 8px 0;          /* Space between inputs */
+  border: 2px solid #ccc; /* Light gray border */
+  border-radius: 4px;     /* Rounded corners */
+  box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+  font-size: 16px;        /* Font size */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Focus effect for the input text box */
+input[type="text"]:focus {
+  border-color: #007bff;  /* Change border color on focus */
+  outline: none;          /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow effect */
+}
+
+/* Placeholder styling */
+input[type="text"]::placeholder {
+  color: #999;            /* Gray placeholder text */
+  font-style: italic;     /* Italic style for placeholder */
+}
+.submit{
+  appearance: none;
+  background-color: #007bff;  /* Change border color on focus */
+  outline: none;  
+  padding: 8px 16px;  
+  border: none;
+  margin: 0 auto;
+  border-radius: 8px;
+  color: white;
+  transition: all .3s linear;
+  font-weight: 500;
+}
+.submit:hover{
+  background-color: #3894f7;
+  
+}
